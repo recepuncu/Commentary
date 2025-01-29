@@ -1,0 +1,47 @@
+name: CI for Commentary Chrome Extension
+
+on:  
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the Chrome Extension
+      run: npm run build  # Veya kullandığınız build komutu
+
+    - name: Zip the extension files
+      run: |
+        mkdir -p dist/extension # İstediğiniz zip dosyasını buraya çıkartabilirsiniz
+        cp -r dist/* dist/extension/  # dist içeriğini bu klasöre kopyalayın
+        cd dist && zip -r commentary.zip extension  # Zip dosyasının adı commentary.zip olacak
+        mv dist/commentary.zip dist/commentary.zip  # Zip dosyasını hedef klasöre taşıyın
+
+    - name: Upload build artifact (Optional)
+      uses: actions/upload-artifact@v2
+      with:
+        name: chrome-extension
+        path: dist/commentary.zip  # Derlenen ve ziplenen dosya
+
+    - name: Deploy to Chrome Web Store
+      uses: GoogleChrome/webstore-upload@v1
+      with:
+        client_id: ${{ secrets.CLIENT_ID }}
+        client_secret: ${{ secrets.CLIENT_SECRET }}
+        refresh_token: ${{ secrets.REFRESH_TOKEN }}
+        extension_id: "bedpkmeelabkkgoaocfgadcgnjaionlg"
+        zip: dist/commentary.zip
