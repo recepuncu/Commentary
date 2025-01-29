@@ -28,3 +28,5 @@ If you find Commentary useful and would like to support its development, conside
 [![Sponsor](https://img.shields.io/badge/Sponsor-❤️-red.svg)](https://github.com/sponsors/recepuncu)
 
 You can sponsor this project at: https://github.com/sponsors/recepuncu
+
+![image](https://github.com/user-attachments/assets/57566abc-44dd-4a18-90a4-409937dbf406)
