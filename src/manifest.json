@@ -16,7 +16,7 @@
     "tabs",
     "activeTab"
   ],
-  "host_permissions": [ "https://*.firebaseio.com/*" ],
+  "host_permissions": [ "https://*.googleapis.com/*", "https://*.firebaseio.com/*" ],
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
