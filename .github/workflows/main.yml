@@ -26,10 +26,10 @@ jobs:
 
     - name: Zip the extension files
       run: |
-        mkdir -p dist/extension # İstediğiniz zip dosyasını buraya çıkartabilirsiniz
-        cp -r dist/* dist/extension/  # dist içeriğini bu klasöre kopyalayın
-        cd dist && zip -r commentary.zip extension  # Zip dosyasının adı commentary.zip olacak
-        mv dist/commentary.zip dist/commentary.zip  # Zip dosyasını hedef klasöre taşıyın
+        mkdir -p dist/extension
+        cp -r dist/* dist/extension/
+        cd dist && zip -r commentary.zip extension
+        mv dist/commentary.zip dist/commentary.zip
 
     - name: Upload build artifact (Optional)
       uses: actions/upload-artifact@v2
