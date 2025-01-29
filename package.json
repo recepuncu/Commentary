@@ -1,0 +1,22 @@
+{
+  "name": "commentary",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [ "chrome-extension", "commentary", "browser-extension", "comment-system" ],
+  "author": "Recep UNCU",
+  "license": "MIT",
+  "description": "Add comments and annotations to any web page you visit, connecting with other readers globally.",
+  "dependencies": {
+    "bad-words": "^4.0.0",
+    "firebase": "^11.2.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.11",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-static-copy": "^2.2.0"
+  }
+}

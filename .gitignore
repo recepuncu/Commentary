@@ -128,3 +128,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Visual Studio
+.vs
+.vscode/*
+.vscodeignore
+.vscode-test/*
+.history
+.nuclide/
+.localhistory

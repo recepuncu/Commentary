@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Add comments and annotations to any web page you visit, connecting with other readers globally." />
+    <meta name="author" content="Recep Uncu" />
+    <title>Commentary</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Commentary</h1>
+            <p>Add comments and annotations to any web page you visit, connecting with other readers globally.</p>
+        </header>
+        <section class="section-comment-box">
+            <textarea id="commentBox"
+                      maxlength="600"
+                      rows="5"
+                      placeholder="Write a professional comment..."
+                      aria-label="Professional comment" autofocus></textarea>
+            <button id="submitComment">Post</button>
+        </section>
+        <section>
+            <h2>Comments from other people:</h2>
+            <div id="commentsList" class="overflow-auto" aria-busy="true" aria-label="Loading…">Loading…</div>
+        </section>
+        <footer>
+            <strong>Commentary</strong> is a project designed to help users engage with news content by commenting and sharing their thoughts.
+            <a href="https://github.com/sponsors/recepuncu" target="_blank"><span class="color-red">❤️</span> Become a sponsor on GitHub</a>
+        </footer>
+    </main>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
