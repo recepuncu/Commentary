@@ -1,9 +1,12 @@
 name: CI for Commentary Chrome Extension
 
-on:  
-  pull_request:
-    branches:
-      - main
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'main'
 
 jobs:
   build:
